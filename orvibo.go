@@ -92,6 +92,11 @@ func Prepare() (bool, error) {
 	return true, nil
 }
 
+func Close() {
+	conn.Close()
+}
+
+
 // Discover is a function that broadcasts 686400067161 over the network in order to find unpaired networks
 func Discover() {
 	// Wondering why we don't return anything? setInterval in our calling code can't handle returns
