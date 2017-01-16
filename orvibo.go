@@ -12,7 +12,6 @@ import (
 	"strconv"
 	"strings" // For string manipulation (indexOf etc.)
 
-	"github.com/davecgh/go-spew/spew" // For neatly outputting stuff
 )
 
 // EventStruct is our equivalent to node.js's Emitters, of sorts.
@@ -135,7 +134,6 @@ func Query() (bool, error) {
 
 // ListDevices spews out info about all the Devices we know about. It's great because it includes counts and other stuff
 func ListDevices() {
-	spew.Dump(&Devices)
 }
 
 // CheckForMessages does what it says on the tin -- checks for incoming UDP messages
